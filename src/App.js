@@ -20,6 +20,7 @@ function App() {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
       },
+      body: JSON.stringify(raw),
       body: JSON.stringify({ message, message1, message2 }),
     });
     const data = await response.json();
