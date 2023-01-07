@@ -18,6 +18,7 @@ function App() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Accept': 'application/json',
       },
       body: JSON.stringify({ message, message1, message2 }),
     });
