@@ -15,6 +15,7 @@ function App() {
     e.preventDefault();
     setLoading(true);
     const response = await fetch('https://15.229.15.104:3000', {
+      mode:'no-cors',
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
