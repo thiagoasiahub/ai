@@ -11,7 +11,7 @@ function App() {
   const [response, setResponse] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     const response = await fetch('http://15.229.15.104:3000', {
