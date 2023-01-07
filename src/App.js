@@ -14,7 +14,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const response = await fetch('/', {
+    const response = await fetch('http://15.229.15.104:3000', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
