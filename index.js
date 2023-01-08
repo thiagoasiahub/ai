@@ -19,7 +19,7 @@ const openai = new OpenAIApi(configuration);
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/', async (req, res) => {
+app.post('/', async (req, res) => {
     const { message, message1, message2 } = req.body;
     const response = await openai.createCompletion({
         model: "text-davinci-003",
