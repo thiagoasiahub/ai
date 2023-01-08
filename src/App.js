@@ -14,11 +14,10 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const response = await fetch('http://15.229.15.104:3000', {
+    const response = await fetch('https://15.229.15.104:3000', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json',
       },
       body: JSON.stringify({ message, message1, message2 }),
     });
