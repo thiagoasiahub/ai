@@ -40,13 +40,13 @@ function App() {
           </select>
         </label>
         <label>
-          <textarea
+          <textarea placeholder="Persona, defina com detalhes o seu cliente..."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
         </label>
         <label>
-          <textarea
+          <textarea placeholder="Produto, descreva com detalhes o seu produto..."
             value={message1}
             onChange={(e) => setMessage1(e.target.value)}
           />
