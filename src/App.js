@@ -28,32 +28,36 @@ function App() {
 
   return (
     <div className="App">
-      <form onSubmit={handleSubmit}>
+      <section className='chatbox'>
+      <div className='chatbox-output'>
+      {loading ? <ReactBootstrap.Spinner animation="border" variant="warning" /> : <p>{response}</p>}
+      </div>
       <label>
+          <h2>Selecione a Mídia</h2>
           <select
             value={message2}
             onChange={(e) => setMessage2(e.target.value)}
-          >
-            <option value="Artigo">Artigo</option>
+            type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <option value="Selecione">Selecione</option>
             <option value="Blog Post">Blog Post</option>
-            <option value="Facebook">Facebook</option>
+            <option value="Facebook">Facebook Ad</option>
+            <option value="Advertorial">Advertorial</option>
           </select>
         </label>
-        <label>
-          <textarea placeholder="Persona, defina com detalhes o seu cliente..."
+      <div className='chatbox-input'>
+      <form onSubmit={handleSubmit}>
+          <textarea className='input-textarea' rows="2" placeholder="Persona, defina com detalhes o seu cliente..."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-        </label>
-        <label>
-          <textarea placeholder="Produto, descreva com detalhes o seu produto..."
+          <textarea className='input-textarea' rows="2" placeholder="Produto, descreva com detalhes o seu produto..."
             value={message1}
             onChange={(e) => setMessage1(e.target.value)}
           />
-        </label>
-        <button type="submit">Submit</button>
+       <p><button type="submit" class="btn btn-primary">Enviar</button></p>
       </form>
-      {loading ? <ReactBootstrap.Spinner animation="border" variant="warning" /> : <p>{response}</p>}
+      </div>
+      </section>
     </div>
   );
 }
