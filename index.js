@@ -8,7 +8,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
-const port = 0;
+const port = null;
 
 const configuration = new Configuration({
     organization: process.env.OPENAI_ORG_KEY,
